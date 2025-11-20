@@ -153,26 +153,102 @@
   footer a:hover { color: white; text-decoration: underline; }
   #carrito-flotante-btn { position: fixed; bottom: 30px; right: 30px; z-index: 999; background-color: var(--color-principal); color: white; border: none; border-radius: 50%; width: 65px; height: 65px; font-size: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.2s ease; }
   #carrito-flotante-btn:hover { background-color: var(--color-secundario); transform: scale(1.1); }
+  
+  /* === MEDIA QUERIES PARA DISPOSITIVOS MÓVILES === */
   @media (max-width: 768px) {
-    section { grid-template-columns: 1fr; gap: 20px; } 
-    h2 { margin-bottom: 20px; }
-    /* Ajustes para Móvil */
-    #carrito-flotante-btn { width: 50px; height: 50px; font-size: 24px; bottom: 15px; right: 15px; }
+    /* Ajustes generales para secciones y contenido */
+    section { 
+      grid-template-columns: 1fr; /* Una sola columna para el contenido principal */
+      gap: 30px; /* Espaciado ajustado */
+      padding: 40px 20px; /* Menos padding en los lados */
+      margin: 20px auto; /* Menos margen vertical */
+    }
+    h2 { 
+      font-size: 2em; /* Títulos más pequeños */
+      margin-bottom: 30px; 
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--color-secundario); /* Borde más fino */
+    }
+    p, li, .producto-descripcion { font-size: 1em; } /* Texto base ligeramente más pequeño */
+    .section-column { padding: 20px; } /* Padding reducido para las columnas internas */
 
-    header { flex-direction: column; align-items: center; padding: 15px 20px; } /* Centrado en móvil */
-    header nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; }
-    header nav a { margin: 5px 8px; font-size: 0.9em; padding: 8px 12px; } /* Botones más pequeños */
+    /* === HEADER Y NAVEGACIÓN (RESPONSIVE) === */
+    header { 
+      flex-direction: column; /* Apila logo y nav verticalmente */
+      align-items: center; /* Centra los elementos */
+      padding: 15px 10px; /* Reduce el padding del header */
+    }
+    .logo-container { 
+      flex-direction: column; /* Apila el logo y el texto del título */
+      text-align: center; /* Centra el texto del logo */
+      margin-bottom: 15px; /* Espacio entre el logo y el nav */
+      width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    .logo-container img { 
+      width: 60px; height: 60px; /* Logo más pequeño */
+      margin-bottom: 5px; /* Espacio entre el logo y el título */
+    }
+    .logo-container h1 { font-size: 1.5em !important; margin: 0 !important; } /* Título más pequeño */
+    .logo-container p { font-size: 0.9em !important; margin: 0 !important; } /* Subtítulo más pequeño */
 
-    /* Ajuste para que el logo no se comprima */
-    .logo-container { flex-direction: column; text-align: center; }
-    .logo-container h1, .logo-container p { margin: 5px 0 !important; }
+    header nav { 
+      flex-wrap: wrap; /* Permite que los enlaces salten de línea */
+      justify-content: center; /* Centra los enlaces */
+      gap: 10px; /* Espaciado entre los enlaces */
+      width: 100%; /* Asegura que la navegación ocupe todo el ancho */
+    }
+    header nav a { 
+      font-size: 0.85em; /* Tamaño de fuente más pequeño para los enlaces */
+      padding: 8px 10px; /* Padding de los enlaces más pequeño */
+      border-radius: 6px;
+      gap: 5px; /* Menos espacio entre icono y texto */
+    }
+    header nav a i { font-size: 1em; } /* Iconos un poco más pequeños */
 
-    section { padding: 40px 20px; margin: 20px auto; }
-    h2 { font-size: 1.8em; margin-bottom: 20px; }
-    #panel-producto { width: 100%; right: -100%; }
+    /* === PANEL LATERAL DE PRODUCTOS (RESPONSIVE) === */
+    #panel-producto { 
+      width: 100%; /* Ocupa todo el ancho de la pantalla */
+      right: -100%; /* Oculto completamente a la derecha */
+      padding-top: 60px; /* Ajusta el padding superior */
+    }
     #panel-producto.abierto { right: 0; }
-    
+    .cerrar-btn { top: 15px; right: 15px; font-size: 30px; } /* Botón de cerrar más pequeño */
+    .ejemplo-producto { padding: 10px; margin-bottom: 15px; }
+    .producto-header img { width: 60px; height: 60px; }
+    .producto-info h4 { font-size: 1em; }
+    .producto-info .precio { font-size: 1.1em; }
+    .producto-descripcion { font-size: 0.85em; }
+
+    /* === BOTÓN FLOTANTE (RESPONSIVE) === */
+    #carrito-flotante-btn { 
+      width: 55px; height: 55px; font-size: 26px; /* Más pequeño */
+      bottom: 20px; right: 20px; /* Posición ajustada */
+    }
+
+    /* === FOOTER (RESPONSIVE) === */
+    footer { padding: 30px 15px; }
+    footer p { font-size: 0.9em; margin-bottom: 15px; }
+    footer div a { margin: 0 8px; font-size: 0.9em; }
+
+    /* Contactos grid en una sola columna en móvil */
+    .contactos-grid { grid-template-columns: 1fr; gap: 20px; }
+    .contacto-card { padding: 20px; }
+    .avatar { width: 80px; height: 80px; }
+    .avatar .fa-user-circle { font-size: 50px; }
+    .contacto-card strong { font-size: 1.2em; }
+    .contacto-info { font-size: 0.9em; }
+
   }
+
+  /* Media Query para pantallas aún más pequeñas (ej: iPhone SE) */
+  @media (max-width: 480px) {
+    h2 { font-size: 1.7em; }
+    header nav a { font-size: 0.8em; padding: 6px 8px; gap: 3px; } /* Enlaces de nav aún más pequeños */
+    .logo-container h1 { font-size: 1.3em !important; }
+    .logo-container p { font-size: 0.8em !important; }
+    #carrito-flotante-btn { width: 45px; height: 45px; font-size: 22px; bottom: 10px; right: 10px; }
+  }
+
 </style>
 
 </head>
@@ -188,10 +264,9 @@
             <img src="https://source.unsplash.com/random/100x100/?nuts,trailmix" alt="Mix de Fruta Seca"> 
             <div class="producto-info">
                 <h4>Mix de Fruta Seca y Semillas</h4>
-                <span class="precio">$25.00 MXN</span>
             </div>
         </div>
-        <p class="producto-descripcion">Mezcla alta en fibra, vitaminas y Omega 3. Excelente fuente de energía sostenida para el estudio.</p>
+        <p class="producto-descripcion">Mezcla alta en fibra, vitaminas y Omega 3. Excelente fuente de energía sostenida para el estudio.<span class="precio" style="display: block; text-align: right; margin-top: 5px;">$25.00 MXN</span></p>
     </div>
 
     <div class="ejemplo-producto">
@@ -199,10 +274,9 @@
             <img src="https://source.unsplash.com/random/100x100/?oatmeal,granola" alt="Barrita de Avena">
             <div class="producto-info">
                 <h4>Barrita de Avena y Miel</h4>
-                <span class="precio">$18.50 MXN</span>
             </div>
         </div>
-        <p class="producto-descripcion">Elaborada con avena integral, baja en azúcar refinada. Perfecta para un desayuno rápido o media mañana.</p>
+        <p class="producto-descripcion">Elaborada con avena integral, baja en azúcar refinada. Perfecta para un desayuno rápido o media mañana.<span class="precio" style="display: block; text-align: right; margin-top: 5px;">$18.50 MXN</span></p>
     </div>
 
     <div class="ejemplo-producto">
@@ -210,10 +284,9 @@
             <img src="https://source.unsplash.com/random/100x100/?sandwich,turkey,healthy" alt="Mini Sándwich Integral">
             <div class="producto-info">
                 <h4>Mini Sándwich Integral de Pavo</h4>
-                <span class="precio">$35.00 MXN</span>
             </div>
         </div>
-        <p class="producto-descripcion">Pan integral, bajo en grasa y fuente de proteína magra. Opción completa para un almuerzo ligero.</p>
+        <p class="producto-descripcion">Pan integral, bajo en grasa y fuente de proteína magra. Opción completa para un almuerzo ligero.<span class="precio" style="display: block; text-align: right; margin-top: 5px;">$35.00 MXN</span></p>
     </div>
     
     <div class="ejemplo-producto">
@@ -221,12 +294,11 @@
             <img src="https://source.unsplash.com/random/100x100/?yogurt,berries" alt="Yogurt Griego">
             <div class="producto-info">
                 <h4>Yogurt Griego Natural</h4>
-                <span class="precio">$22.00 MXN</span>
             </div>
         </div>
-        <p class="producto-descripcion">Alto en proteína para la saciedad, sin azúcares añadidos. Ideal para combinar con fruta fresca.</p>
+        <p class="producto-descripcion">Alto en proteína para la saciedad, sin azúcares añadidos. Ideal para combinar con fruta fresca.<span class="precio" style="display: block; text-align: right; margin-top: 5px;">$22.00 MXN</span></p>
     </div>
-
+    
     <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
     <p style="text-align: center; font-style: italic; font-size: 0.9em;">¡Comer bien es fácil!</p>
 
@@ -333,6 +405,7 @@
     <p>
       Al proporcionar una mejor nutrición, impactamos directamente en la salud cerebral y física, promoviendo mayor concentración, energía sostenida y, por ende, mejor **rendimiento académico**.
     </p>
+    
   </div>
   <div class="section-column">
     <h4>🌱 Fomento de Hábitos</h4>
