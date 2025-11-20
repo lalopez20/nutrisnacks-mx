@@ -9,484 +9,491 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
-  /* Variables de Color Actualizadas y Simplificadas */
-  :root {
-    --color-principal: #008744; /* Verde Oscuro */
-    --color-secundario: #005f73; /* Azul Oscuro */
-    --color-resalte: #f0c330; /* Amarillo/Dorado */
-    
-    --fondo-seccion-1: #ffffff; /* Color de Fondo: Blanco */
-    --fondo-seccion-2: #f3fcf1; /* Color de Fondo: Verde muy claro */
-    
-    --color-texto-oscuro: #212529;
-    --color-texto-gris: #5c6773;
-    --color-sombra: 0 8px 25px rgba(0, 0, 0, 0.1); 
-    --color-header-overlay: rgba(0, 135, 68, 0.75); 
-    --color-body-overlay: rgba(255, 255, 255, 0.85); 
-  }
+  /* Variables de Color Actualizadas y Simplificadas */
+  :root {
+    --color-principal: #008744; /* Verde Oscuro */
+    --color-secundario: #005f73; /* Azul Oscuro */
+    --color-resalte: #f0c330; /* Amarillo/Dorado */
+    
+    --fondo-seccion-1: #ffffff; /* Color de Fondo: Blanco */
+    --fondo-seccion-2: #f3fcf1; /* Color de Fondo: Verde muy claro */
+    
+    --color-texto-oscuro: #212529;
+    --color-texto-gris: #5c6773;
+    --color-sombra: 0 8px 25px rgba(0, 0, 0, 0.1); 
+    --color-header-overlay: rgba(0, 135, 68, 0.75); 
+    --color-body-overlay: rgba(255, 255, 255, 0.85); 
+  }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
 
-  body {
-    margin: 0; font-family: 'Poppins', sans-serif; color: var(--color-texto-oscuro); line-height: 1.6; 
-    overflow-x: hidden; 
-    background: 
-      linear-gradient(var(--color-body-overlay), var(--color-body-overlay)), 
-      url('https://source.unsplash.com/random/1920x1080/?fresh,food,healthylifestyle') no-repeat center center fixed;
-    background-size: cover; background-attachment: fixed; 
-  }
+  body {
+    margin: 0; font-family: 'Poppins', sans-serif; color: var(--color-texto-oscuro); line-height: 1.6; 
+    overflow-x: hidden; 
+    background: 
+      linear-gradient(var(--color-body-overlay), var(--color-body-overlay)), 
+      url('https://source.unsplash.com/random/1920x1080/?fresh,food,healthylifestyle') no-repeat center center fixed;
+    background-size: cover; background-attachment: fixed; 
+  }
 
-  /* TIPOGRAFÍA Y COLORES DEL CONTENIDO */
-  h2 { 
-    color: var(--color-resalte); font-weight: 800; font-size: 2.5em; 
-    border-bottom: 4px solid var(--color-secundario); padding-bottom: 15px; 
-    margin-bottom: 40px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    grid-column: 1 / -1; 
-    text-align: center;
-  }
-  
-  h4, .contacto-card strong { color: var(--color-principal); font-weight: 700; }
+  /* TIPOGRAFÍA Y COLORES DEL CONTENIDO */
+  h2 { 
+    color: var(--color-resalte); font-weight: 800; font-size: 2.5em; 
+    border-bottom: 4px solid var(--color-secundario); padding-bottom: 15px; 
+    margin-bottom: 40px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / -1; 
+    text-align: center;
+  }
+  
+  h4, .contacto-card strong { color: var(--color-principal); font-weight: 700; }
 
-  p, li, .producto-descripcion { font-size: 1.1em; color: var(--color-texto-gris); }
+  p, li, .producto-descripcion { font-size: 1.1em; color: var(--color-texto-gris); }
 
-  /* === SECCIONES (FONDOS Y CUADRÍCULA) === */
-  section {
-    padding: 80px 50px; max-width: 1200px; margin: 40px auto; border-radius: 20px; 
-    box-shadow: var(--color-sombra); 
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 40px; 
-  }
+  /* === SECCIONES (FONDOS Y CUADRÍCULA) === */
+  section {
+    padding: 80px 50px; max-width: 1200px; margin: 40px auto; border-radius: 20px; 
+    box-shadow: var(--color-sombra); 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+  }
 
-  /* ALTERNANCIA DE COLORES DE FONDO: BLANCO / VERDE CLARO */
-  #introduccion { background: var(--fondo-seccion-1); } /* Blanco */
-  #problema { background: var(--fondo-seccion-2); } /* Verde Claro */
-  #poblacion { background: var(--fondo-seccion-1); } /* Blanco */
-  #solucion { background: var(--fondo-seccion-2); } /* Verde Claro */
-  #justificacion { background: var(--fondo-seccion-1); } /* Blanco */
-  #contactos { background: var(--fondo-seccion-2); } /* Verde Claro */
-  #conclusion { background: var(--fondo-seccion-1); } /* Blanco */
+  /* ALTERNANCIA DE COLORES DE FONDO: BLANCO / VERDE CLARO */
+  #introduccion { background: var(--fondo-seccion-1); } /* Blanco */
+  #problema { background: var(--fondo-seccion-2); } /* Verde Claro */
+  #poblacion { background: var(--fondo-seccion-1); } /* Blanco */
+  #solucion { background: var(--fondo-seccion-2); } /* Verde Claro */
+  #justificacion { background: var(--fondo-seccion-1); } /* Blanco */
+  #contactos { background: var(--fondo-seccion-2); } /* Verde Claro */
+  #conclusion { background: var(--fondo-seccion-1); } /* Blanco */
 
 
-  /* Excluir Contactos de la cuadrícula de 2 columnas (ya tiene su propia cuadrícula) */
-  #contactos { 
-      display: block; 
-      text-align: center; 
-      padding-bottom: 80px; 
-  }
-  #contactos h2 { text-align: center; } 
+  /* Excluir Contactos de la cuadrícula de 2 columnas (ya tiene su propia cuadrícula) */
+  #contactos { 
+      display: block; 
+      text-align: center; 
+      padding-bottom: 80px; 
+  }
+  #contactos h2 { text-align: center; } 
 
-  /* Contenedores dentro de las secciones para agrupar el contenido en las columnas */
-  .section-column { 
-      background: inherit; /* Hereda el color de fondo de la sección padre (blanco o verde claro) */
-      padding: 30px; 
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      border-top: 3px solid var(--color-principal);
-  }
-  .section-column h4 { margin-top: 0; }
-  .section-column ul { margin-bottom: 0; }
+  /* Contenedores dentro de las secciones para agrupar el contenido en las columnas */
+  .section-column { 
+      background: inherit; /* Hereda el color de fondo de la sección padre (blanco o verde claro) */
+      padding: 30px; 
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-top: 3px solid var(--color-principal);
+  }
+  .section-column h4 { margin-top: 0; }
+  .section-column ul { margin-bottom: 0; }
 
-  /* === CONTACTOS === */
-  .contactos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-  .contacto-card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #e0e0e0; }
-  .contacto-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 10px 25px rgba(0, 135, 68, 0.2); }
-  .avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid var(--color-resalte); margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .avatar .fa-user-circle { font-size: 60px; color: var(--color-principal); background: var(--fondo-seccion-2); padding: 15px; border-radius: 50%; }
-  .avatar.male .fa-user-circle { color: var(--color-secundario); background: var(--fondo-seccion-3); }
-  .contacto-card strong { font-size: 1.3em; margin-bottom: 5px; color: var(--color-texto-oscuro); }
-  .contacto-info { font-size: 0.95em; line-height: 1.6; margin-top: 10px; display: flex; flex-direction: column; align-items: center; }
-  .whatsapp-link { color: #25D366; font-weight: 700; }
-  .whatsapp-link i { font-size: 18px; color: #25D366; }
-  .contacto-info a .fa-envelope { color: var(--color-principal); font-size: 16px; }
+  /* === CONTACTOS === */
+  .contactos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+  .contacto-card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid #e0e0e0; }
+  .contacto-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 10px 25px rgba(0, 135, 68, 0.2); }
+  .avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid var(--color-resalte); margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .avatar .fa-user-circle { font-size: 60px; color: var(--color-principal); background: var(--fondo-seccion-2); padding: 15px; border-radius: 50%; }
+  .avatar.male .fa-user-circle { color: var(--color-secundario); background: var(--fondo-seccion-3); }
+  .contacto-card strong { font-size: 1.3em; margin-bottom: 5px; color: var(--color-texto-oscuro); }
+  .contacto-info { font-size: 0.95em; line-height: 1.6; margin-top: 10px; display: flex; flex-direction: column; align-items: center; }
+  .whatsapp-link { color: #25D366; font-weight: 700; }
+  .whatsapp-link i { font-size: 18px; color: #25D366; }
+  .contacto-info a .fa-envelope { color: var(--color-principal); font-size: 16px; }
 
-  /* === HEADER (Barra de Navegación Fija) === */
-  header { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 20px 40px; 
-    background: linear-gradient(var(--color-header-overlay), var(--color-header-overlay)), url('https://source.unsplash.com/random/1920x150/?science,laboratory,medical') no-repeat center center; 
-    background-size: cover; 
-    color: white; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
-  }
-  .logo-container h1 { color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-weight: 700; } 
-  .logo-container p { color: #f0fff0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); } 
-  .logo-container { display:flex; align-items:center; gap:12px; }
-  
-  /* ESTILOS DEL LOGO AJUSTADOS */
-  .logo-container img { 
-    width: 80px; 
-    height: 80px; 
-    object-fit: contain; 
-    border-radius: 50%; 
-    border: 4px solid white; 
-  } 
-  
-  header nav { display: flex; gap: 20px; }
-  header nav a { color: white; text-decoration: none; font-weight: 600; padding: 10px 15px; border-radius: 8px; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); border-bottom: 3px solid transparent; }
-  header nav a:hover { background-color: rgba(255, 255, 255, 0.15); border-bottom: 3px solid var(--color-resalte); color: #e6fffa; }
-  header nav a i { font-size: 1.1em; color: var(--color-resalte); transition: color 0.3s ease; }
-  header nav a:hover i { color: white; }
+  /* === HEADER (Barra de Navegación Fija) === */
+  header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px 40px; 
+    background: linear-gradient(var(--color-header-overlay), var(--color-header-overlay)), url('https://source.unsplash.com/random/1920x150/?science,laboratory,medical') no-repeat center center; 
+    background-size: cover; 
+    color: white; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+  }
+  .logo-container h1 { color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-weight: 700; } 
+  .logo-container p { color: #f0fff0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); } 
+  .logo-container { display:flex; align-items:center; gap:12px; }
+  
+  /* ESTILOS DEL LOGO AJUSTADOS */
+  .logo-container img { 
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain; 
+    border-radius: 50%; 
+    border: 4px solid white; 
+  } 
+  
+  header nav { display: flex; gap: 20px; }
+  header nav a { color: white; text-decoration: none; font-weight: 600; padding: 10px 15px; border-radius: 8px; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); border-bottom: 3px solid transparent; }
+  header nav a:hover { background-color: rgba(255, 255, 255, 0.15); border-bottom: 3px solid var(--color-resalte); color: #e6fffa; }
+  header nav a i { font-size: 1.1em; color: var(--color-resalte); transition: color 0.3s ease; }
+  header nav a:hover i { color: white; }
 
-  /* === PANEL LATERAL DE PRODUCTOS === */
-  #panel-producto { height: 100%; width: 350px; position: fixed; z-index: 1001; top: 0; right: -350px; background-color: white; box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15); overflow-y: auto; overflow-x: hidden; transition: right 0.5s ease; padding: 20px; padding-top: 80px; }
-  #panel-producto.abierto { right: 0; }
-  .cerrar-btn { position: absolute; top: 20px; right: 25px; font-size: 36px; cursor: pointer; color: var(--color-texto-gris); }
-  .ejemplo-producto { background-color: var(--fondo-seccion-2); border: 1px solid #d4ecd4; border-radius: 12px; padding: 15px; margin-bottom: 20px; transition: all 0.3s ease; position: relative; }
-  .ejemplo-producto:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); z-index: 10; border-color: var(--color-principal); }
-  .producto-header { display: flex; gap: 15px; margin-bottom: 10px; align-items: center; }
-  .producto-header img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; border: 2px solid var(--color-resalte); }
-  .producto-info { flex-grow: 1; }
-  .producto-info h4 { margin: 0; font-size: 1.1em; line-height: 1.3; }
-  .producto-info .precio { color: #e76f51; font-weight: 800; font-size: 1.2em; display: block; margin-top: 5px; } 
-  .producto-descripcion { font-size: 0.9em; margin: 5px 0 0 0; color: var(--color-texto-gris); }
+  /* === PANEL LATERAL DE PRODUCTOS === */
+  #panel-producto { height: 100%; width: 350px; position: fixed; z-index: 1001; top: 0; right: -350px; background-color: white; box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15); overflow-y: auto; overflow-x: hidden; transition: right 0.5s ease; padding: 20px; padding-top: 80px; }
+  #panel-producto.abierto { right: 0; }
+  .cerrar-btn { position: absolute; top: 20px; right: 25px; font-size: 36px; cursor: pointer; color: var(--color-texto-gris); }
+  .ejemplo-producto { background-color: var(--fondo-seccion-2); border: 1px solid #d4ecd4; border-radius: 12px; padding: 15px; margin-bottom: 20px; transition: all 0.3s ease; position: relative; }
+  .ejemplo-producto:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); z-index: 10; border-color: var(--color-principal); }
+  .producto-header { display: flex; gap: 15px; margin-bottom: 10px; align-items: center; }
+  .producto-header img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; border: 2px solid var(--color-resalte); }
+  .producto-info { flex-grow: 1; }
+  .producto-info h4 { margin: 0; font-size: 1.1em; line-height: 1.3; }
+  .producto-info .precio { color: #e76f51; font-weight: 800; font-size: 1.2em; display: block; margin-top: 5px; } 
+  .producto-descripcion { font-size: 0.9em; margin: 5px 0 0 0; color: var(--color-texto-gris); }
 
-  /* Footer y Media Queries */
-  footer { margin-top: 60px; padding: 40px 30px; background: var(--color-secundario); color: white; text-align: center; border-top: 8px solid var(--color-resalte); }
-  footer p { color: #e0f2f1; }
-  footer a { color: var(--color-resalte); font-weight: 700; }
-  footer a:hover { color: white; text-decoration: underline; }
-  #carrito-flotante-btn { position: fixed; bottom: 30px; right: 30px; z-index: 999; background-color: var(--color-principal); color: white; border: none; border-radius: 50%; width: 65px; height: 65px; font-size: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.2s ease; }
-  #carrito-flotante-btn:hover { background-color: var(--color-secundario); transform: scale(1.1); }
-  @media (max-width: 768px) {
-    section { grid-template-columns: 1fr; gap: 20px; } 
-    h2 { margin-bottom: 20px; }
-    /* Ajustes para Móvil */
-    #carrito-flotante-btn { width: 50px; height: 50px; font-size: 24px; bottom: 15px; right: 15px; }
+  /* Footer y Media Queries */
+  footer { margin-top: 60px; padding: 40px 30px; background: var(--color-secundario); color: white; text-align: center; border-top: 8px solid var(--color-resalte); }
+  footer p { color: #e0f2f1; }
+  footer a { color: var(--color-resalte); font-weight: 700; }
+  footer a:hover { color: white; text-decoration: underline; }
+  #carrito-flotante-btn { position: fixed; bottom: 30px; right: 30px; z-index: 999; background-color: var(--color-principal); color: white; border: none; border-radius: 50%; width: 65px; height: 65px; font-size: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.2s ease; }
+  #carrito-flotante-btn:hover { background-color: var(--color-secundario); transform: scale(1.1); }
+  @media (max-width: 768px) {
+    section { grid-template-columns: 1fr; gap: 20px; } 
+    h2 { margin-bottom: 20px; }
+    /* Ajustes para Móvil */
+    #carrito-flotante-btn { width: 50px; height: 50px; font-size: 24px; bottom: 15px; right: 15px; }
 
-    header { flex-direction: column; align-items: flex-start; padding: 15px 20px; }
-    header nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; }
-    header nav a { margin: 5px 8px; }
-    section { padding: 40px 20px; margin: 20px auto; }
-    h2 { font-size: 1.8em; margin-bottom: 20px; }
-    #panel-producto { width: 100%; right: -100%; }
-    #panel-producto.abierto { right: 0; }
-    
-  }
+    header { flex-direction: column; align-items: center; padding: 15px 20px; } /* Centrado en móvil */
+    header nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; }
+    header nav a { margin: 5px 8px; font-size: 0.9em; padding: 8px 12px; } /* Botones más pequeños */
+
+    /* Ajuste para que el logo no se comprima */
+    .logo-container { flex-direction: column; text-align: center; }
+    .logo-container h1, .logo-container p { margin: 5px 0 !important; }
+
+    section { padding: 40px 20px; margin: 20px auto; }
+    h2 { font-size: 1.8em; margin-bottom: 20px; }
+    #panel-producto { width: 100%; right: -100%; }
+    #panel-producto.abierto { right: 0; }
+    
+  }
 </style>
 
 </head>
 <body>
 
 <div id="panel-producto">
-    <span class="cerrar-btn" onclick="cerrarPanel()">&times;</span>
-    <h2>🛒 Nuestros NutriSnacks</h2>
-    <p style="font-size: 0.9em; margin-bottom: 20px;">Ejemplos de artículos que ofrecemos para una alimentación saludable y energética.</p>
-    
-    <div class="ejemplo-producto">
-        <div class="producto-header">
-            <img src="https://source.unsplash.com/random/100x100/?nuts,trailmix" alt="Mix de Fruta Seca"> 
-            <div class="producto-info">
-                <h4>Mix de Fruta Seca y Semillas</h4>
-                <span class="precio">$25.00 MXN</span>
-            </div>
-        </div>
-        <p class="producto-descripcion">Mezcla alta en fibra, vitaminas y Omega 3. Excelente fuente de energía sostenida para el estudio.</p>
-    </div>
+    <span class="cerrar-btn" onclick="cerrarPanel()">&times;</span>
+    <h2>🛒 Nuestros NutriSnacks</h2>
+    <p style="font-size: 0.9em; margin-bottom: 20px;">Ejemplos de artículos que ofrecemos para una alimentación saludable y energética.</p>
+    
+    <div class="ejemplo-producto">
+        <div class="producto-header">
+            <img src="https://source.unsplash.com/random/100x100/?nuts,trailmix" alt="Mix de Fruta Seca"> 
+            <div class="producto-info">
+                <h4>Mix de Fruta Seca y Semillas</h4>
+                <span class="precio">$25.00 MXN</span>
+            </div>
+        </div>
+        <p class="producto-descripcion">Mezcla alta en fibra, vitaminas y Omega 3. Excelente fuente de energía sostenida para el estudio.</p>
+    </div>
 
-    <div class="ejemplo-producto">
-        <div class="producto-header">
-            <img src="https://source.unsplash.com/random/100x100/?oatmeal,granola" alt="Barrita de Avena">
-            <div class="producto-info">
-                <h4>Barrita de Avena y Miel</h4>
-                <span class="precio">$18.50 MXN</span>
-            </div>
-        </div>
-        <p class="producto-descripcion">Elaborada con avena integral, baja en azúcar refinada. Perfecta para un desayuno rápido o media mañana.</p>
-    </div>
+    <div class="ejemplo-producto">
+        <div class="producto-header">
+            <img src="https://source.unsplash.com/random/100x100/?oatmeal,granola" alt="Barrita de Avena">
+            <div class="producto-info">
+                <h4>Barrita de Avena y Miel</h4>
+                <span class="precio">$18.50 MXN</span>
+            </div>
+        </div>
+        <p class="producto-descripcion">Elaborada con avena integral, baja en azúcar refinada. Perfecta para un desayuno rápido o media mañana.</p>
+    </div>
 
-    <div class="ejemplo-producto">
-        <div class="producto-header">
-            <img src="https://source.unsplash.com/random/100x100/?sandwich,turkey,healthy" alt="Mini Sándwich Integral">
-            <div class="producto-info">
-                <h4>Mini Sándwich Integral de Pavo</h4>
-                <span class="precio">$35.00 MXN</span>
-            </div>
-        </div>
-        <p class="producto-descripcion">Pan integral, bajo en grasa y fuente de proteína magra. Opción completa para un almuerzo ligero.</p>
-    </div>
-    
-    <div class="ejemplo-producto">
-        <div class="producto-header">
-            <img src="https://source.unsplash.com/random/100x100/?yogurt,berries" alt="Yogurt Griego">
-            <div class="producto-info">
-                <h4>Yogurt Griego Natural</h4>
-                <span class="precio">$22.00 MXN</span>
-            </div>
-        </div>
-        <p class="producto-descripcion">Alto en proteína para la saciedad, sin azúcares añadidos. Ideal para combinar con fruta fresca.</p>
-    </div>
+    <div class="ejemplo-producto">
+        <div class="producto-header">
+            <img src="https://source.unsplash.com/random/100x100/?sandwich,turkey,healthy" alt="Mini Sándwich Integral">
+            <div class="producto-info">
+                <h4>Mini Sándwich Integral de Pavo</h4>
+                <span class="precio">$35.00 MXN</span>
+            </div>
+        </div>
+        <p class="producto-descripcion">Pan integral, bajo en grasa y fuente de proteína magra. Opción completa para un almuerzo ligero.</p>
+    </div>
+    
+    <div class="ejemplo-producto">
+        <div class="producto-header">
+            <img src="https://source.unsplash.com/random/100x100/?yogurt,berries" alt="Yogurt Griego">
+            <div class="producto-info">
+                <h4>Yogurt Griego Natural</h4>
+                <span class="precio">$22.00 MXN</span>
+            </div>
+        </div>
+        <p class="producto-descripcion">Alto en proteína para la saciedad, sin azúcares añadidos. Ideal para combinar con fruta fresca.</p>
+    </div>
 
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-    <p style="text-align: center; font-style: italic; font-size: 0.9em;">¡Comer bien es fácil!</p>
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+    <p style="text-align: center; font-style: italic; font-size: 0.9em;">¡Comer bien es fácil!</p>
 
 </div>
 
 
 <button id="carrito-flotante-btn" onclick="abrirPanel()">
-    <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
 </button>
 
 <header>
-  <div class="logo-container">
-  <img src="logo.png" alt="NutriSnacks Logo">
-    <div>
-      <h1 style="margin:0;">NutriSnacks MX</h1>
-      <p style="margin:0;">Comer rico también puede ser saludable</p>
-    </div>
-  </div>
-  <nav>
-    <a href="#introduccion"><i class="fas fa-home"></i> Introducción</a>
-    <a href="#problema"><i class="fas fa-list-alt"></i> Problema</a> 
-    <a href="#solucion"><i class="fas fa-lightbulb"></i> Solución</a>
-    <a href="#justificacion"><i class="fas fa-balance-scale"></i> Justificación</a>
-    <a href="#contactos"><i class="fas fa-users"></i> Equipo</a>
-  </nav>
+  <div class="logo-container">
+    <img src="logo.png" alt="NutriSnacks Logo">
+    <div>
+      <h1 style="margin:0;">NutriSnacks MX</h1>
+      <p style="margin:0;">Comer rico también puede ser saludable</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#introduccion"><i class="fas fa-home"></i> Introducción</a>
+    <a href="#problema"><i class="fas fa-list-alt"></i> Problema</a> 
+    <a href="#solucion"><i class="fas fa-lightbulb"></i> Solución</a>
+    <a href="#justificacion"><i class="fas fa-balance-scale"></i> Justificación</a>
+    <a href="#contactos"><i class="fas fa-users"></i> Equipo</a>
+  </nav>
 </header>
 
 <section id="introduccion">
-  <h2>Introducción</h2>
-  <div class="section-column">
-    <h4>✅ Nuestra Misión</h4>
-    <p>
-      Somos un equipo de estudiantes de enfermería comprometidos con la **salud alimentaria** y el bienestar estudiantil. Nuestro objetivo es combatir los malos hábitos nutricionales comunes en el entorno académico.
-    </p>
-  </div>
-  <div class="section-column">
-    <h4>💡 ¿Qué es NutriSnacks MX?</h4>
-    <p>
-      Presentamos **NutriSnacks MX**, un proyecto creado para ofrecer **snacks saludables, accesibles** y pensados especialmente para la comunidad estudiantil y el personal docente.
-    </p>
-  </div>
+  <h2>Introducción</h2>
+  <div class="section-column">
+    <h4>✅ Nuestra Misión</h4>
+    <p>
+      Somos un equipo de estudiantes de enfermería comprometidos con la **salud alimentaria** y el bienestar estudiantil. Nuestro objetivo es combatir los malos hábitos nutricionales comunes en el entorno académico.
+    </p>
+    <img src="https://source.unsplash.com/random/400x300/?students,nurse,healthyfood" alt="Estudiantes con comida saludable" style="width: 100%; height: auto; border-radius: 8px; margin-top: 15px;">
+  </div>
+  <div class="section-column">
+    <h4>💡 ¿Qué es NutriSnacks MX?</h4>
+    <p>
+      Presentamos **NutriSnacks MX**, un proyecto creado para ofrecer **snacks saludables, accesibles** y pensados especialmente para la comunidad estudiantil y el personal docente.
+    </p>
+    <img src="https://source.unsplash.com/random/400x300/?fruits,nuts,snacks" alt="Snacks saludables" style="width: 100%; height: auto; border-radius: 8px; margin-top: 15px;">
+  </div>
 </section>
 
 <section id="problema">
-  <h2>El Problema y sus Causas</h2>
-  <div class="section-column">
-    <h4>⚠️ Causas del Problema</h4>
-    <p>El consumo elevado de comida chatarra entre estudiantes es impulsado por varios factores:</p>
-    <ul>
-      <li>**Falta de tiempo:** No hay tiempo para preparar comidas saludables.</li>
-      <li>**Accesibilidad:** Poco acceso a opciones nutritivas dentro de la escuela.</li>
-      <li>**Comodidad:** Preferencia por productos comerciales rápidos, aunque altos en azúcar y grasa.</li>
-    </ul>
-  </div>
-  <div class="section-column">
-    <h4>🚨 Consecuencias en la Salud</h4>
-    <p>Este patrón alimenticio incrementa riesgos significativos en la población joven:</p>
-    <ul>
-      <li>**Problemas de Salud:** Aumento de sobrepeso, obesidad y riesgo de enfermedades crónicas.</li>
-      <li>**Bajo Rendimiento:** Cansancio, mala nutrición y bajo rendimiento escolar.</li>
-      <li>**Impacto a Largo Plazo:** Creación de malos hábitos que perdurarán en la edad adulta.</li>
-    </ul>
-  </div>
+  <h2>El Problema y sus Causas</h2>
+  <div class="section-column">
+    <h4>⚠️ Causas del Problema</h4>
+    <p>El consumo elevado de comida chatarra entre estudiantes es impulsado por varios factores:</p>
+    <ul>
+      <li>**Falta de tiempo:** No hay tiempo para preparar comidas saludables.</li>
+      <li>**Accesibilidad:** Poco acceso a opciones nutritivas dentro de la escuela.</li>
+      <li>**Comodidad:** Preferencia por productos comerciales rápidos, aunque altos en azúcar y grasa.</li>
+    </ul>
+  </div>
+  <div class="section-column">
+    <h4>🚨 Consecuencias en la Salud</h4>
+    <p>Este patrón alimenticio incrementa riesgos significativos en la población joven:</p>
+    <ul>
+      <li>**Problemas de Salud:** Aumento de sobrepeso, obesidad y riesgo de enfermedades crónicas.</li>
+      <li>**Bajo Rendimiento:** Cansancio, mala nutrición y bajo rendimiento escolar.</li>
+      <li>**Impacto a Largo Plazo:** Creación de malos hábitos que perdurarán en la edad adulta.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="poblacion">
-  <h2>Población Objetivo</h2>
-  <div class="section-column">
-    <h4>🎯 Enfoque Primario</h4>
-    <p>
-      Nuestro proyecto se dirige principalmente a los **estudiantes de nivel medio superior y superior** que necesitan energía constante y de calidad para sus estudios.
-    </p>
-  </div>
-  <div class="section-column">
-    <h4>👥 Enfoque Secundario</h4>
-    <p>
-      También buscamos beneficiar a **docentes y personal administrativo** que desean alternativas de alimentación rápida, nutritiva y práctica para consumir durante sus jornadas laborales.
-    </p>
-  </div>
+  <h2>Población Objetivo</h2>
+  <div class="section-column">
+    <h4>🎯 Enfoque Primario</h4>
+    <p>
+      Nuestro proyecto se dirige principalmente a los **estudiantes de nivel medio superior y superior** que necesitan energía constante y de calidad para sus estudios.
+    </p>
+  </div>
+  <div class="section-column">
+    <h4>👥 Enfoque Secundario</h4>
+    <p>
+      También buscamos beneficiar a **docentes y personal administrativo** que desean alternativas de alimentación rápida, nutritiva y práctica para consumir durante sus jornadas laborales.
+    </p>
+  </div>
 </section>
 
 <section id="solucion">
-  <h2>Solución Propuesta</h2>
-  <div class="section-column">
-    <h4>📍 Puntos de Venta Estratégicos</h4>
-    <p>
-      Implementaremos puntos de venta convenientes para la comunidad educativa, asegurando que el acceso a opciones nutritivas sea tan fácil como el acceso a la comida rápida.
-    </p>
-  </div>
-  <div class="section-column">
-    <h4>🥗 Variedad y Nutrición</h4>
-    <p>
-      Ofreceremos una amplia variedad de snacks nutritivos, bajos en azúcares y grasas saturadas, siempre con precios accesibles y diseños atractivos.
-    </p>
-  </div>
+  <h2>Solución Propuesta</h2>
+  <div class="section-column">
+    <h4>📍 Puntos de Venta Estratégicos</h4>
+    <p>
+      Implementaremos puntos de venta convenientes para la comunidad educativa, asegurando que el acceso a opciones nutritivas sea tan fácil como el acceso a la comida rápida.
+    </p>
+  </div>
+  <div class="section-column">
+    <h4>🥗 Variedad y Nutrición</h4>
+    <p>
+      Ofreceremos una amplia variedad de snacks nutritivos, bajos en azúcares y grasas saturadas, siempre con precios accesibles y diseños atractivos.
+    </p>
+  </div>
 </section>
 
 <section id="justificacion">
-  <h2>Justificación</h2>
-  <div class="section-column">
-    <h4>📈 Impacto en el Rendimiento</h4>
-    <p>
-      Al proporcionar una mejor nutrición, impactamos directamente en la salud cerebral y física, promoviendo mayor concentración, energía sostenida y, por ende, mejor **rendimiento académico**.
-    </p>
-  </div>
-  <div class="section-column">
-    <h4>🌱 Fomento de Hábitos</h4>
-    <p>
-      **NutriSnacks MX** no es solo un negocio; es una iniciativa que mejora el bienestar general y **fomenta hábitos positivos** que la comunidad escolar podrá mantener a largo plazo.
-    </p>
-  </div>
+  <h2>Justificación</h2>
+  <div class="section-column">
+    <h4>📈 Impacto en el Rendimiento</h4>
+    <p>
+      Al proporcionar una mejor nutrición, impactamos directamente en la salud cerebral y física, promoviendo mayor concentración, energía sostenida y, por ende, mejor **rendimiento académico**.
+    </p>
+  </div>
+  <div class="section-column">
+    <h4>🌱 Fomento de Hábitos</h4>
+    <p>
+      **NutriSnacks MX** no es solo un negocio; es una iniciativa que mejora el bienestar general y **fomenta hábitos positivos** que la comunidad escolar podrá mantener a largo plazo.
+    </p>
+  </div>
 </section>
 
 <section id="contactos">
-  <h2>Conoce al Equipo</h2>
-  <p>Somos estudiantes de enfermería con una visión de salud y bienestar.</p>
+  <h2>Conoce al Equipo</h2>
+  <p>Somos estudiantes de enfermería con una visión de salud y bienestar.</p>
 
-  <div class="contactos-grid">
-    
-    <div class="contacto-card">
-        <div class="avatar">
-            <i class="fas fa-user-circle"></i> 
-        </div>
-        <strong>Quintero María Guadalupe</strong>
-        <div class="contacto-info">
-            <a href="mailto:quinteromaria@example.com" title="Enviar correo">
-                <i class="fas fa-envelope"></i> quinteromaria@example.com
-            </a>
-            <a class="whatsapp-link" href="https://wa.me/5216675828608" target="_blank" title="Contactar por WhatsApp">
-                <i class="fab fa-whatsapp"></i> 6675828608
-            </a>
-        </div>
-    </div>
+  <div class="contactos-grid">
+    
+    <div class="contacto-card">
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i> 
+        </div>
+        <strong>Quintero María Guadalupe</strong>
+        <div class="contacto-info">
+            <a href="mailto:quinteromaria@example.com" title="Enviar correo">
+                <i class="fas fa-envelope"></i> quinteromaria@example.com
+            </a>
+            <a class="whatsapp-link" href="https://wa.me/5216675828608" target="_blank" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> 6675828608
+            </a>
+        </div>
+    </div>
 
-    <div class="contacto-card">
-        <div class="avatar">
-            <i class="fas fa-user-circle"></i>
-        </div>
-        <strong>Martínez Martínez María Fernanda</strong>
-        <div class="contacto-info">
-            <a href="mailto:martinezmafer@example.com" title="Enviar correo">
-                <i class="fas fa-envelope"></i> martinezmafer@example.com
-            </a>
-            <a class="whatsapp-link" href="https://wa.me/5216673176654" target="_blank" title="Contactar por WhatsApp">
-                <i class="fab fa-whatsapp"></i> 6673176654
-            </a>
-        </div>
-    </div>
+    <div class="contacto-card">
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <strong>Martínez Martínez María Fernanda</strong>
+        <div class="contacto-info">
+            <a href="mailto:martinezmafer@example.com" title="Enviar correo">
+                <i class="fas fa-envelope"></i> martinezmafer@example.com
+            </a>
+            <a class="whatsapp-link" href="https://wa.me/5216673176654" target="_blank" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> 6673176654
+            </a>
+        </div>
+    </div>
 
-    <div class="contacto-card">
-        <div class="avatar male"> 
-            <i class="fas fa-user-circle"></i>
-        </div>
-        <strong>Felix Otero Luis Fernando</strong>
-        <div class="contacto-info">
-            <a href="mailto:felixluis@example.com" title="Enviar correo">
-                <i class="fas fa-envelope"></i> felixluis@example.com
-            </a>
-            <a class="whatsapp-link" href="https://wa.me/5216673091193" target="_blank" title="Contactar por WhatsApp">
-                <i class="fab fa-whatsapp"></i> 6673091193
-            </a>
-        </div>
-    </div>
+    <div class="contacto-card">
+        <div class="avatar male"> 
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <strong>Felix Otero Luis Fernando</strong>
+        <div class="contacto-info">
+            <a href="mailto:felixluis@example.com" title="Enviar correo">
+                <i class="fas fa-envelope"></i> felixluis@example.com
+            </a>
+            <a class="whatsapp-link" href="https://wa.me/5216673091193" target="_blank" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> 6673091193
+            </a>
+        </div>
+    </div>
 
-    <div class="contacto-card">
-        <div class="avatar">
-            <i class="fas fa-user-circle"></i>
-        </div>
-        <strong>Martínez Palma Sofía</strong>
-        <div class="contacto-info">
-            <a href="mailto:martinezsofia@example.com" title="Enviar correo">
-                <i class="fas fa-envelope"></i> martinezsofia@example.com
-            </a>
-            <a class="whatsapp-link" href="https://wa.me/5216677559798" target="_blank" title="Contactar por WhatsApp">
-                <i class="fab fa-whatsapp"></i> 6677559798
-            </a>
-        </div>
-    </div>
+    <div class="contacto-card">
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <strong>Martínez Palma Sofía</strong>
+        <div class="contacto-info">
+            <a href="mailto:martinezsofia@example.com" title="Enviar correo">
+                <i class="fas fa-envelope"></i> martinezsofia@example.com
+            </a>
+            <a class="whatsapp-link" href="https://wa.me/5216677559798" target="_blank" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> 6677559798
+            </a>
+        </div>
+    </div>
 
-    <div class="contacto-card">
-        <div class="avatar">
-            <i class="fas fa-user-circle"></i>
-        </div>
-        <strong>Vidales Rivas Atziry Sugey</strong>
-        <div class="contacto-info">
-            <a href="mailto:vidalesatziry@example.com" title="Enviar correo">
-                <i class="fas fa-envelope"></i> vidalesatziry@example.com
-            </a>
-            <a class="whatsapp-link" href="https://wa.me/5216673233763" target="_blank" title="Contactar por WhatsApp">
-                <i class="fab fa-whatsapp"></i> 6673233763
-            </a>
-        </div>
-    </div>
-    
-    <div class="contacto-card">
-        <div class="avatar">
-            <i class="fas fa-user-circle"></i>
-        </div>
-        <strong>González Arreola Renee Montserrath</strong>
-        <div class="contacto-info">
-            <a href="mailto:gonzalezrenee@example.com" title="Enviar correo">
-                <i class="fas fa-envelope"></i> gonzalezrenee@example.com
-            </a>
-            <a class="whatsapp-link" href="https://wa.me/5216671513892" target="_blank" title="Contactar por WhatsApp">
-                <i class="fab fa-whatsapp"></i> 6671513892
-            </a>
-        </div>
-    </div>
+    <div class="contacto-card">
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <strong>Vidales Rivas Atziry Sugey</strong>
+        <div class="contacto-info">
+            <a href="mailto:vidalesatziry@example.com" title="Enviar correo">
+                <i class="fas fa-envelope"></i> vidalesatziry@example.com
+            </a>
+            <a class="whatsapp-link" href="https://wa.me/5216673233763" target="_blank" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> 6673233763
+            </a>
+        </div>
+    </div>
+    
+    <div class="contacto-card">
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <strong>González Arreola Renee Montserrath</strong>
+        <div class="contacto-info">
+            <a href="mailto:gonzalezrenee@example.com" title="Enviar correo">
+                <i class="fas fa-envelope"></i> gonzalezrenee@example.com
+            </a>
+            <a class="whatsapp-link" href="https://wa.me/5216671513892" target="_blank" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> 6671513892
+            </a>
+        </div>
+    </div>
 
-    <div class="contacto-card">
-        <div class="avatar">
-            <i class="fas fa-user-circle"></i>
-        </div>
-        <strong>Peñuelas Rodelo Elena de Jesús</strong>
-        <div class="contacto-info">
-            <a href="mailto:penuelaselena@example.com" title="Enviar correo">
-                <i class="fas fa-envelope"></i> penuelaselena@example.com
-            </a>
-            <a class="whatsapp-link" href="https://wa.me/5216721179060" target="_blank" title="Contactar por WhatsApp">
-                <i class="fab fa-whatsapp"></i> 6721179060
-            </a>
-        </div>
-    </div>
+    <div class="contacto-card">
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <strong>Peñuelas Rodelo Elena de Jesús</strong>
+        <div class="contacto-info">
+            <a href="mailto:penuelaselena@example.com" title="Enviar correo">
+                <i class="fas fa-envelope"></i> penuelaselena@example.com
+            </a>
+            <a class="whatsapp-link" href="https://wa.me/5216721179060" target="_blank" title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> 6721179060
+            </a>
+        </div>
+    </div>
 
-  </div>
+  </div>
 
 </section>
 
 <section id="conclusion">
-  <h2>Conclusión</h2>
-  <div class="section-column" style="grid-column: 1 / -1; text-align: center;">
-    <p>
-      NutriSnacks MX busca mejorar los hábitos alimenticios en la comunidad con alternativas saludables,
-      promoviendo energía, bienestar y una mejor calidad de vida entre estudiantes y personal.
-    </p>
-  </div>
+  <h2>Conclusión</h2>
+  <div class="section-column" style="grid-column: 1 / -1; text-align: center;">
+    <p>
+      NutriSnacks MX busca mejorar los hábitos alimenticios en la comunidad con alternativas saludables,
+      promoviendo energía, bienestar y una mejor calidad de vida entre estudiantes y personal.
+    </p>
+  </div>
 </section>
 
 <footer>
-  <p>NutriSnacks MX © 2025 — Proyecto universitario de enfermería</p>
-  <div>
-    <a href="#introduccion">Inicio</a>
-    <a href="#contactos">Equipo</a>
-    <a href="mailto:info@nutrisnacks.com">Contacto por Email</a>
-  </div>
+  <p>NutriSnacks MX © 2025 — Proyecto universitario de enfermería</p>
+  <div>
+    <a href="#introduccion">Inicio</a>
+    <a href="#contactos">Equipo</a>
+    <a href="mailto:info@nutrisnacks.com">Contacto por Email</a>
+  </div>
 </footer>
 
 <script>
-    function abrirPanel() {
-        document.getElementById("panel-producto").classList.add("abierto");
-    }
+    function abrirPanel() {
+        document.getElementById("panel-producto").classList.add("abierto");
+    }
 
-    function cerrarPanel() {
-        document.getElementById("panel-producto").classList.remove("abierto");
-    }
+    function cerrarPanel() {
+        document.getElementById("panel-producto").classList.remove("abierto");
+    }
 
-    window.onclick = function(event) {
-        var panel = document.getElementById("panel-producto");
-        var carrito = document.getElementById("carrito-flotante-btn");
-        
-        // Lógica para cerrar el Panel de Productos
-        if (panel.classList.contains("abierto") && !panel.contains(event.target) && !carrito.contains(event.target)) {
-            cerrarPanel();
-        }
-    }
+    window.onclick = function(event) {
+        var panel = document.getElementById("panel-producto");
+        var carrito = document.getElementById("carrito-flotante-btn");
+        
+        // Lógica para cerrar el Panel de Productos
+        if (panel.classList.contains("abierto") && !panel.contains(event.target) && !carrito.contains(event.target)) {
+            cerrarPanel();
+        }
+    }
 </script>
 
 </body>
